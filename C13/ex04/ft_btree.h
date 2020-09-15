@@ -1,0 +1,29 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_btree.h                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: louise <lsoulier@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/09/14 15:31:16 by louise            #+#    #+#             */
+/*   Updated: 2020/09/15 14:19:46 by louise           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef FT_BTREE_H
+# define FT_BTREE_H
+# include <stdlib.h>
+
+typedef struct	s_btree
+{
+	struct s_btree	*left;
+	struct s_btree	*right;
+	void			*item;
+}				t_btree;
+t_btree			*btree_create_node(void *item);
+void			btree_apply_prefix(t_btree *root, void (*applyf)(void *));
+void			btree_apply_infix(t_btree *root, void (*applyf)(void *));
+void			btree_apply_suffix(t_btree *root, void (*applyf)(void *));
+void			btree_insert_data(t_btree **root, void *item,
+		int (*cmpf)(void *, void *));
+#endif
