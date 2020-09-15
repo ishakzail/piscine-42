@@ -15,6 +15,7 @@ Notes :<br/>
 -C09 : 100<br/>
 -C10 : 0 (mais ft_cat est passe a la moulinette)<br/>
 -C11 : 100<br/>
--C12 : fait apres la piscine, mais mes mains de test fonctionnent ^^'<br/>
--rush01 : 8 (malloc non securises et timeout+++, mais dans l'absolu, fonctionne)<br/>
--C13, rush00, rush02, bsq non faits<br/>
+-C12 : fait apres la piscine<br/>
+-C13 : fait apres la piscine<br />
+-rush01 : 8 (malloc non securises et timeout+++)<br/>
+-rush00, rush02, bsq non faits<br/>
