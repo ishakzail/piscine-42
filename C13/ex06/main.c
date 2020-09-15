@@ -1,22 +1,6 @@
 #include "ft_btree.h"
 #include <stdio.h>
 
-void ft_printf(void *str)
-{
-	printf("%s,", str);
-}
-
-int ft_strcmp(void *a1, void *a2)
-{
-	int i = 0;
-	char *s1 = (char*)a1;
-	char *s2 = (char*)a2;
-
-	while (s1[i] && s2[i] && s1[i] == s2[i])
-		i++;
-	return (s1[i] - s2[i]);
-}
-
 int main()
 {
 	t_btree *r;
@@ -31,8 +15,7 @@ int main()
 	t_btree *j;
 	t_btree *k;
 	t_btree *l;
-
-	t_btree *found;
+	t_btree *w;
 
 	r = btree_create_node("r");
 	a = btree_create_node("a");
@@ -46,6 +29,7 @@ int main()
 	j = btree_create_node("j");
 	k = btree_create_node("k");
 	l = btree_create_node("l");
+	w = btree_create_node("w");
 
 	r->left = a;
 	r->right = b;
@@ -58,9 +42,8 @@ int main()
 	b->left = e;
 	b->right = f;
 	e->left = k;
+	l->left = w;
 
-	found = btree_search_item(r, "l", &ft_strcmp);
-	if (found)
-		printf("%s\n", found->item);
+	printf("%d\n", btree_level_count(r));
 	return (0);
 }

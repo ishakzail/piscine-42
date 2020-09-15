@@ -6,7 +6,7 @@
 /*   By: louise <lsoulier@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/14 15:31:16 by louise            #+#    #+#             */
-/*   Updated: 2020/09/15 15:52:55 by louise           ###   ########.fr       */
+/*   Updated: 2020/09/15 16:52:04 by louise           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,5 @@ void			btree_insert_data(t_btree **root, void *item,
 		int (*cmpf)(void *, void *));
 void			*btree_search_item(t_btree *root, void *data_ref,
 		int (*cmpf)(void *, void *));
+int				btree_level_count(t_btree *root);
 #endif
