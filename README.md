@@ -6,7 +6,7 @@ Notes :<br/>
 -C00 : 100<br/>
 -C01 : 100<br/>
 -C02 : 92 (ft_print_memory n'est pas passe)<br/>
--C03 : 75 (ft_strlcat...)<br/>
+-C03 : probleme de copie
 -C04 : 100<br/>
 -C05 : 100<br/>
 -C06 : 100<br/>
